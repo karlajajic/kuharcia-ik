@@ -29,6 +29,10 @@ namespace kuharica_ikkj
              Visible = false;
         }
 
+        int x = 2;
+        int y = 2;
+
+
         private void btnUnosNovogRecepta_Click(object sender, EventArgs e)
         {
             string name = tbNazivRecepta.Text;
@@ -41,22 +45,26 @@ namespace kuharica_ikkj
                 MessageBox.Show("Unesite sve podatke!");
             else
             {
+                y = x++;
+                x = y;
 
                 string connString = ConfigurationManager.ConnectionStrings["kuharica_ikkj.Properties.Settings.kuharicaConnectionString"].ConnectionString;
 
                 using (SqlConnection con = new SqlConnection(connString)) //poveznica
                 {
-                    using (SqlCommand cmd = new SqlCommand(" SELECT * FROM Recepti", con)) //naredba 
+                    string query = "INSERT INTO Recepti (Id, Naziv, Tip, Vrijeme) VALUES ('" + x + "', '" + tbNazivRecepta.Text + "', '" + cbTipJela.Text + "', '" + tbPriprema.Text + "')";
+                    using (SqlCommand cmd = new SqlCommand(query, con)) //naredba 
                     {
+                       
                         con.Open();
-                        string query = "INSERT INTO Recepti (Naziv, Tip, Vrijeme pripreme) VALUES ('" + tbNazivRecepta.Text + "', '" + cbTipJela.Text + "', '" + tbPriprema.Text + "')";
-
+                        //string query = "INSERT INTO Recepti (Naziv, Tip, Vrijeme pripreme) VALUES ('" + tbNazivRecepta.Text + "', '" + cbTipJela.Text + "', '" + tbPriprema.Text + "')";
                         // SqlDataAdapter SDA = new SqlDataAdapter(query, con);
                         //SDA.SelectCommand.ExecuteNonQuery();
-
+    
                         cmd.ExecuteNonQuery();
                         con.Close();
                         MessageBox.Show("Recept je unesen");
+                       
                     }
                 }
             }

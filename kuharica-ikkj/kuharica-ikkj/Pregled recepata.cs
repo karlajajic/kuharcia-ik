@@ -21,7 +21,8 @@ namespace kuharica_ikkj
 
         private void Pregled_recepata_Load(object sender, EventArgs e)
         {
-            ReceptiDataGridView.DataSource = GetData();
+            this.receptiTableAdapter.Fill(this.kuharicaDataSet2.Recepti);
+            receptiDataGridView.DataSource = GetData();
         }
 
         private DataTable GetData ()  //sluzi kako bi dosli do podataka
@@ -43,6 +44,13 @@ namespace kuharica_ikkj
             }
 
             return dtRecepti;
+        }
+
+        private void btnGlavniIzbornik_Click(object sender, EventArgs e)
+        {
+            Kuharica openForm = new Kuharica();
+            openForm.Show();
+            Visible = false;
         }
     }
 }
