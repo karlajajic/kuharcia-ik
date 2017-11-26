@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient; //povezujemo s databaseom
 
 namespace kuharica_ikkj
 {
     public partial class Recept_unos : Form
     {
+
+       
+
         public Recept_unos()
         {
             InitializeComponent();
