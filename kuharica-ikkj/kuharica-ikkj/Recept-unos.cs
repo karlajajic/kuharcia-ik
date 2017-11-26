@@ -33,5 +33,33 @@ namespace kuharica_ikkj
         {
 
         }
+
+        private void tbNazivRecepta_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUnosNovogRecepta_Click(object sender, EventArgs e)
+        {
+
+            string name = tbNazivRecepta.Text;
+            string ingrediant = tbSastojci.Text;
+            string preptime = tbPriprema.Text;
+            string preparation = tbPPriprema.Text;
+            string course= "";
+
+            if (rbPredjelo.Checked) course = "p";
+            if (rbGlavnoJelo.Checked) course = "g";
+            if (rbDesert.Checked) course = "d";
+
+            Recept r = new Recept(name, ingrediant, preptime, preparation);
+
+            if (r.UnosR(name, ingrediant, preptime, preparation))
+            {
+                if (rbPredjelo.Checked || rbGlavnoJelo.Checked || rbDesert.Checked)
+                    MessageBox.Show("Recept je unesen!");
+                else MessageBox.Show("Odaberite tip jela!");
+            }
+        }
     }
 }

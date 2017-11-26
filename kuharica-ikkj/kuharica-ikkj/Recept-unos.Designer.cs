@@ -34,13 +34,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbPriprema = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbSastojci = new System.Windows.Forms.TextBox();
             this.btnGlavniIzbornik = new System.Windows.Forms.Button();
             this.btnUnosNovogRecepta = new System.Windows.Forms.Button();
             this.rbPredjelo = new System.Windows.Forms.RadioButton();
             this.rbGlavnoJelo = new System.Windows.Forms.RadioButton();
             this.rbDesert = new System.Windows.Forms.RadioButton();
             this.btnUnesiSliku = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tbPPriprema = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,6 +70,7 @@
             this.tbNazivRecepta.Name = "tbNazivRecepta";
             this.tbNazivRecepta.Size = new System.Drawing.Size(173, 20);
             this.tbNazivRecepta.TabIndex = 2;
+            this.tbNazivRecepta.TextChanged += new System.EventHandler(this.tbNazivRecepta_TextChanged);
             // 
             // label2
             // 
@@ -94,12 +97,12 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Sastojci :";
             // 
-            // textBox1
+            // tbSastojci
             // 
-            this.textBox1.Location = new System.Drawing.Point(79, 222);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(194, 20);
-            this.textBox1.TabIndex = 6;
+            this.tbSastojci.Location = new System.Drawing.Point(79, 222);
+            this.tbSastojci.Name = "tbSastojci";
+            this.tbSastojci.Size = new System.Drawing.Size(194, 20);
+            this.tbSastojci.TabIndex = 6;
             // 
             // btnGlavniIzbornik
             // 
@@ -119,6 +122,7 @@
             this.btnUnosNovogRecepta.TabIndex = 8;
             this.btnUnosNovogRecepta.Text = "Unos recepta";
             this.btnUnosNovogRecepta.UseVisualStyleBackColor = true;
+            this.btnUnosNovogRecepta.Click += new System.EventHandler(this.btnUnosNovogRecepta_Click);
             // 
             // rbPredjelo
             // 
@@ -163,18 +167,36 @@
             this.btnUnesiSliku.Text = "Unos slike";
             this.btnUnesiSliku.UseVisualStyleBackColor = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(23, 271);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Priprema :";
+            // 
+            // tbPPriprema
+            // 
+            this.tbPPriprema.Location = new System.Drawing.Point(83, 268);
+            this.tbPPriprema.Name = "tbPPriprema";
+            this.tbPPriprema.Size = new System.Drawing.Size(194, 20);
+            this.tbPPriprema.TabIndex = 14;
+            // 
             // Recept_unos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(447, 441);
+            this.Controls.Add(this.tbPPriprema);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnUnesiSliku);
             this.Controls.Add(this.rbDesert);
             this.Controls.Add(this.rbGlavnoJelo);
             this.Controls.Add(this.rbPredjelo);
             this.Controls.Add(this.btnUnosNovogRecepta);
             this.Controls.Add(this.btnGlavniIzbornik);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbSastojci);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tbPriprema);
             this.Controls.Add(this.label2);
@@ -197,12 +219,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbPriprema;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbSastojci;
         private System.Windows.Forms.Button btnGlavniIzbornik;
         private System.Windows.Forms.Button btnUnosNovogRecepta;
         private System.Windows.Forms.RadioButton rbPredjelo;
         private System.Windows.Forms.RadioButton rbGlavnoJelo;
         private System.Windows.Forms.RadioButton rbDesert;
         private System.Windows.Forms.Button btnUnesiSliku;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox tbPPriprema;
     }
 }
