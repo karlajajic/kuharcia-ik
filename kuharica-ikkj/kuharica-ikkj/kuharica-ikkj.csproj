@@ -67,6 +67,7 @@
     <Compile Include="Recept-unos.Designer.cs">
       <DependentUpon>Recept-unos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Recept.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
