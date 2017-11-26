@@ -23,5 +23,12 @@ namespace kuharica_ikkj
             openForm1.Show();
             Visible = false;
         }
+
+        private void btnSve_Click(object sender, EventArgs e)
+        {
+            Pregled_recepata openForm2 = new Pregled_recepata();
+            openForm2.Show();
+            Visible = false;
+        }
     }
 }

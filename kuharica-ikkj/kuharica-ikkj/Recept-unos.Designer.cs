@@ -37,12 +37,11 @@
             this.tbSastojci = new System.Windows.Forms.TextBox();
             this.btnGlavniIzbornik = new System.Windows.Forms.Button();
             this.btnUnosNovogRecepta = new System.Windows.Forms.Button();
-            this.rbPredjelo = new System.Windows.Forms.RadioButton();
-            this.rbGlavnoJelo = new System.Windows.Forms.RadioButton();
-            this.rbDesert = new System.Windows.Forms.RadioButton();
             this.btnUnesiSliku = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.tbPPriprema = new System.Windows.Forms.TextBox();
+            this.cbTipJela = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,7 +67,7 @@
             // 
             this.tbNazivRecepta.Location = new System.Drawing.Point(226, 55);
             this.tbNazivRecepta.Name = "tbNazivRecepta";
-            this.tbNazivRecepta.Size = new System.Drawing.Size(173, 20);
+            this.tbNazivRecepta.Size = new System.Drawing.Size(209, 20);
             this.tbNazivRecepta.TabIndex = 2;
             this.tbNazivRecepta.TextChanged += new System.EventHandler(this.tbNazivRecepta_TextChanged);
             // 
@@ -85,7 +84,7 @@
             // 
             this.tbPriprema.Location = new System.Drawing.Point(276, 84);
             this.tbPriprema.Name = "tbPriprema";
-            this.tbPriprema.Size = new System.Drawing.Size(123, 20);
+            this.tbPriprema.Size = new System.Drawing.Size(159, 20);
             this.tbPriprema.TabIndex = 4;
             // 
             // label3
@@ -101,12 +100,12 @@
             // 
             this.tbSastojci.Location = new System.Drawing.Point(79, 222);
             this.tbSastojci.Name = "tbSastojci";
-            this.tbSastojci.Size = new System.Drawing.Size(194, 20);
+            this.tbSastojci.Size = new System.Drawing.Size(356, 20);
             this.tbSastojci.TabIndex = 6;
             // 
             // btnGlavniIzbornik
             // 
-            this.btnGlavniIzbornik.Location = new System.Drawing.Point(38, 377);
+            this.btnGlavniIzbornik.Location = new System.Drawing.Point(38, 449);
             this.btnGlavniIzbornik.Name = "btnGlavniIzbornik";
             this.btnGlavniIzbornik.Size = new System.Drawing.Size(125, 35);
             this.btnGlavniIzbornik.TabIndex = 7;
@@ -116,47 +115,13 @@
             // 
             // btnUnosNovogRecepta
             // 
-            this.btnUnosNovogRecepta.Location = new System.Drawing.Point(186, 377);
+            this.btnUnosNovogRecepta.Location = new System.Drawing.Point(186, 449);
             this.btnUnosNovogRecepta.Name = "btnUnosNovogRecepta";
             this.btnUnosNovogRecepta.Size = new System.Drawing.Size(125, 35);
             this.btnUnosNovogRecepta.TabIndex = 8;
             this.btnUnosNovogRecepta.Text = "Unos recepta";
             this.btnUnosNovogRecepta.UseVisualStyleBackColor = true;
             this.btnUnosNovogRecepta.Click += new System.EventHandler(this.btnUnosNovogRecepta_Click);
-            // 
-            // rbPredjelo
-            // 
-            this.rbPredjelo.AutoSize = true;
-            this.rbPredjelo.Location = new System.Drawing.Point(186, 127);
-            this.rbPredjelo.Name = "rbPredjelo";
-            this.rbPredjelo.Size = new System.Drawing.Size(63, 17);
-            this.rbPredjelo.TabIndex = 9;
-            this.rbPredjelo.TabStop = true;
-            this.rbPredjelo.Text = "Predjelo";
-            this.rbPredjelo.UseVisualStyleBackColor = true;
-            // 
-            // rbGlavnoJelo
-            // 
-            this.rbGlavnoJelo.AutoSize = true;
-            this.rbGlavnoJelo.Location = new System.Drawing.Point(186, 150);
-            this.rbGlavnoJelo.Name = "rbGlavnoJelo";
-            this.rbGlavnoJelo.Size = new System.Drawing.Size(78, 17);
-            this.rbGlavnoJelo.TabIndex = 10;
-            this.rbGlavnoJelo.TabStop = true;
-            this.rbGlavnoJelo.Text = "GlavnoJelo";
-            this.rbGlavnoJelo.UseVisualStyleBackColor = true;
-            this.rbGlavnoJelo.CheckedChanged += new System.EventHandler(this.rbGlavnoJelo_CheckedChanged);
-            // 
-            // rbDesert
-            // 
-            this.rbDesert.AutoSize = true;
-            this.rbDesert.Location = new System.Drawing.Point(186, 173);
-            this.rbDesert.Name = "rbDesert";
-            this.rbDesert.Size = new System.Drawing.Size(56, 17);
-            this.rbDesert.TabIndex = 11;
-            this.rbDesert.TabStop = true;
-            this.rbDesert.Text = "Desert";
-            this.rbDesert.UseVisualStyleBackColor = true;
             // 
             // btnUnesiSliku
             // 
@@ -178,22 +143,43 @@
             // 
             // tbPPriprema
             // 
-            this.tbPPriprema.Location = new System.Drawing.Point(83, 268);
+            this.tbPPriprema.Location = new System.Drawing.Point(79, 271);
+            this.tbPPriprema.Multiline = true;
             this.tbPPriprema.Name = "tbPPriprema";
-            this.tbPPriprema.Size = new System.Drawing.Size(194, 20);
+            this.tbPPriprema.Size = new System.Drawing.Size(356, 172);
             this.tbPPriprema.TabIndex = 14;
+            // 
+            // cbTipJela
+            // 
+            this.cbTipJela.FormattingEnabled = true;
+            this.cbTipJela.Items.AddRange(new object[] {
+            "Predjelo",
+            "Glavno jelo",
+            "Desert"});
+            this.cbTipJela.Location = new System.Drawing.Point(233, 120);
+            this.cbTipJela.Name = "cbTipJela";
+            this.cbTipJela.Size = new System.Drawing.Size(162, 21);
+            this.cbTipJela.TabIndex = 15;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(183, 120);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 13);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Tip jela:";
             // 
             // Recept_unos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(447, 441);
+            this.ClientSize = new System.Drawing.Size(447, 496);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.cbTipJela);
             this.Controls.Add(this.tbPPriprema);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnUnesiSliku);
-            this.Controls.Add(this.rbDesert);
-            this.Controls.Add(this.rbGlavnoJelo);
-            this.Controls.Add(this.rbPredjelo);
             this.Controls.Add(this.btnUnosNovogRecepta);
             this.Controls.Add(this.btnGlavniIzbornik);
             this.Controls.Add(this.tbSastojci);
@@ -222,11 +208,10 @@
         private System.Windows.Forms.TextBox tbSastojci;
         private System.Windows.Forms.Button btnGlavniIzbornik;
         private System.Windows.Forms.Button btnUnosNovogRecepta;
-        private System.Windows.Forms.RadioButton rbPredjelo;
-        private System.Windows.Forms.RadioButton rbGlavnoJelo;
-        private System.Windows.Forms.RadioButton rbDesert;
         private System.Windows.Forms.Button btnUnesiSliku;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbPPriprema;
+        private System.Windows.Forms.ComboBox cbTipJela;
+        private System.Windows.Forms.Label label5;
     }
 }
