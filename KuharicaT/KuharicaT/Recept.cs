@@ -5,32 +5,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace kuharica_ikkj
+namespace KuharicaT
 {
     class Recept
     {
-        public string Name { get; set;}
-        public string Ingredient { get; set;}
-        public string PreparationTime { get; set;}
-        public string Course { get; set;}
+        public string Name { get; set; }
+        public string Ingredient { get; set; }
+        public string PreparationTime { get; set; }
+        public string Course { get; set; }
         public string Preparation { get; set; }
 
-        public Recept (string name, string ingredient, string preptime, string cousre, string preparation)
+        public Recept(string name, string ingredient, string preptime, string cousre, string preparation) //konstruktor
         {
             this.Name = name;
             this.Ingredient = ingredient;
             this.PreparationTime = preptime;
             this.Course = cousre;
             this.Preparation = preparation;
-        }
-
-        private void EmptyTextBox1 (string name, string ingredient, string preptime, string cousre, string preparation)
-        {
-            name = string.Empty;
-            ingredient = string.Empty;
-            preptime = string.Empty;
-            cousre = string.Empty;
-            preparation = string.Empty;
         }
 
         internal bool UnosR(string name, string ingredient, string preptime, string preparation) //sluzi za provjeru unosa
@@ -46,13 +37,9 @@ namespace kuharica_ikkj
             }
         }
 
-        Recept[] recepti;
-
-        public override string ToString()
+        public override string ToString()  //metoda
         {
             return Name + ", " + Course;
         }
-
-
     }
 }

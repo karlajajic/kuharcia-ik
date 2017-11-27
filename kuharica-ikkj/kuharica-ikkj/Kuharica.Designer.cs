@@ -46,7 +46,7 @@
             // 
             // btnSve
             // 
-            this.btnSve.Location = new System.Drawing.Point(210, 209);
+            this.btnSve.Location = new System.Drawing.Point(194, 171);
             this.btnSve.Name = "btnSve";
             this.btnSve.Size = new System.Drawing.Size(176, 52);
             this.btnSve.TabIndex = 5;
@@ -56,7 +56,7 @@
             // 
             // btnNoviRecept
             // 
-            this.btnNoviRecept.Location = new System.Drawing.Point(245, 299);
+            this.btnNoviRecept.Location = new System.Drawing.Point(227, 292);
             this.btnNoviRecept.Name = "btnNoviRecept";
             this.btnNoviRecept.Size = new System.Drawing.Size(109, 52);
             this.btnNoviRecept.TabIndex = 6;
