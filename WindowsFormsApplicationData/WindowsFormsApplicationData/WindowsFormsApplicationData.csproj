@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{22A42F73-5398-42A7-BF16-4CC9DAA140CD}</ProjectGuid>
+    <ProjectGuid>{4D6836E9-6A19-4058-BC96-31005F68EC99}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>kuharica_ikkj</RootNamespace>
-    <AssemblyName>kuharica-ikkj</AssemblyName>
+    <RootNamespace>WindowsFormsApplicationData</RootNamespace>
+    <AssemblyName>WindowsFormsApplicationData</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -49,7 +49,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -62,60 +61,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Kuharica.cs">
+    <Compile Include="Popis.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Kuharica.Designer.cs">
-      <DependentUpon>Kuharica.cs</DependentUpon>
-    </Compile>
-    <Compile Include="kuharicaDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>kuharicaDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="kuharicaDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>kuharicaDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="kuharicaDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>kuharicaDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Login.cs" />
-    <Compile Include="..\..\..\..\..\Documents\Visual Studio 2015\Projects\Pregled recepata.cs">
-      <SubType>Form</SubType>
-      <Link>Pregled recepata.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\Documents\Visual Studio 2015\Projects\Pregled recepata.Designer.cs">
-      <DependentUpon>Pregled recepata.cs</DependentUpon>
-      <Link>Pregled recepata.Designer.cs</Link>
+    <Compile Include="Popis.Designer.cs">
+      <DependentUpon>Popis.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Recept-unos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Recept-unos.Designer.cs">
-      <DependentUpon>Recept-unos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Recept.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Kuharica.resx">
-      <DependentUpon>Kuharica.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\..\..\..\Documents\Visual Studio 2015\Projects\Pregled recepata.resx">
-      <DependentUpon>Pregled recepata.cs</DependentUpon>
-      <Link>Pregled recepata.resx</Link>
+    <EmbeddedResource Include="Popis.resx">
+      <DependentUpon>Popis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -126,41 +95,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Recept-unos.resx">
-      <DependentUpon>Recept-unos.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="kuharicaDataSet.xsc">
-      <DependentUpon>kuharicaDataSet.xsd</DependentUpon>
+    <None Include="DataDataSet.xsc">
+      <DependentUpon>DataDataSet.xsd</DependentUpon>
     </None>
-    <None Include="kuharicaDataSet.xsd">
+    <None Include="DataDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>kuharicaDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="kuharicaDataSet.xss">
-      <DependentUpon>kuharicaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="kuharicaDataSet1.xsc">
-      <DependentUpon>kuharicaDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="kuharicaDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>kuharicaDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="kuharicaDataSet1.xss">
-      <DependentUpon>kuharicaDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="kuharicaDataSet2.xsc">
-      <DependentUpon>kuharicaDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="kuharicaDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>kuharicaDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="kuharicaDataSet2.xss">
-      <DependentUpon>kuharicaDataSet2.xsd</DependentUpon>
+    <None Include="DataDataSet.xss">
+      <DependentUpon>DataDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -173,17 +117,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="kuharica.mdf">
+    <Content Include="Data.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="kuharica_log.ldf">
+    <Content Include="Data_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>kuharica.mdf</DependentUpon>
+      <DependentUpon>Data.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>

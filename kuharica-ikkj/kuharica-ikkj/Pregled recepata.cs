@@ -40,6 +40,8 @@ namespace kuharica_ikkj
                     SqlDataReader reader = cmd.ExecuteReader(); //stvaramo "citaca"
 
                     dtRecepti.Load(reader); // "citac" prepisuje podatke u tablicu => nastaje kopija 
+
+                    con.Close();
                 }
             }
 
